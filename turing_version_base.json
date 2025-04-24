@@ -36,11 +36,11 @@
         },
         {
           "nombre": "Sarachaga, Lautaro Leonel",
-          "edad": falta ,
-          "cargo": "falta ",
-          "foto": "falta ",
-          "email": "falta ",
-          "habilidades": "programacion",
+          "edad": 22,
+          "cargo": "Developer",
+          "foto": "https://imgur.com/a/EmZKcuC",
+          "email": "lautarosarachaga@hotmail.com",
+          "habilidades": "Programación, planteo de soluciones",
           "salario": 50000.0,
           "activo": true
         },
