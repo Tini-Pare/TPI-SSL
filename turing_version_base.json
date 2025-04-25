@@ -12,7 +12,7 @@
         "ciudad": "Resistencia",
         "país": "Argentina"
       },
-      "alianza_equipo": "Como equipo, asumimos el compromiso de trabajar de manera colaborativa, con responsabilidad y una comunicación  constante que nos permita avanzar de forma sostenida en el desarrollo del proyecto. Nuestros valores fundamentales serán la responsabilidad técnica y académica, el respeto por las ideas y aportes de cada integrante, el compromiso con el aprendizaje colectivo, la claridad y constancia en la comunicación, y la búsqueda de calidad tanto en el código como en la documentación. En cuanto a la organización del trabajo, acordamos reunirnos tres veces por semana para coordinar avances, revisar el código y distribuir tareas de forma eficiente. Las reuniones se llevarán a cabo los lunes, miércoles y viernes a las 10: 00 horas, de manera virtual a través de Discord. Para la comunicación diaria y ágil utilizaremos WhatsApp como canal principal. Asimismo, trabajaremos de forma colaborativa mediante GitHub para el control de versiones y el desarrollo del código, y emplearemos Google Drive para compartir y mantener actualizada la documentación del proyecto.",
+      "alianza_equipo": "Como equipo, asumimos el compromiso de trabajar de manera colaborativa, con responsabilidad y una comunicación constante que nos permita avanzar de forma sostenida en el desarrollo del proyecto. Nuestros valores fundamentales serán la responsabilidad técnica y académica, el respeto por las ideas y aportes de cada integrante, el compromiso con el aprendizaje colectivo, la claridad y constancia en la comunicación, y la búsqueda de calidad tanto en el código como en la documentación. En cuanto a la organización del trabajo, acordamos reunirnos tres veces por semana para coordinar avances, revisar el código y distribuir tareas de forma eficiente. Las reuniones se llevarán a cabo los lunes, miércoles y viernes a las 10: 00 horas, de manera virtual a través de Discord. Para la comunicación diaria y ágil utilizaremos WhatsApp como canal principal. Asimismo, trabajaremos de forma colaborativa mediante GitHub para el control de versiones y el desarrollo del código, y emplearemos Google Drive para compartir y mantener actualizada la documentación del proyecto.",
       "integrantes": [
         {
           "nombre": "Godoy, Marianela Yasmín",
@@ -46,11 +46,11 @@
         },
         {
           "nombre": "Martínez, Carlos Exequiel",
-          "edad": falta ,
-          "cargo": "falta ",
-          "foto": "falta ",
-          "email": "falta ",
-          "habilidades": "falta ",
+          "edad": 22,
+          "cargo": "video producer",
+          "foto": "https://imgur.com/a/uoKyUrf",
+          "email": "exemartinez1922@gmail.com",
+          "habilidades": "Manejo de Inglés, Redacción de documentos, Producción de videos",
           "salario": 50000.0,
           "activo": true
         },
