@@ -3,6 +3,7 @@ import ply.lex as lex
 from tkinter import filedialog
 import tkinter as tk
 import time
+import ply.yacc as yacc
 
 
 tokens = ( 
@@ -121,4 +122,52 @@ if __name__ == "__main__":
     for tok in lexer:
         print(tok)
   
+
+# ---- parser ------
+
+parser = yacc.yacc()
+
+def p_jason(p):
+    '''json: LLAVE_I estructura_equipo LLAVE_D
+            | LLAVE_I estructura_equipo COMA otros LLAVE_D
+            |LLAVE_I firma COMA otros2 LLAVE_D
+            |LLAVE_I version COMA otros3 LLAVE_D'''
+    p[0] = ("EQUIPOS", p[2])
+    
+def p_estructura_equipo(p):
+    'esturctura_equipo: EQUIPOS DOSPUNTOS CORCHETE_I lista_equipos CORCHETE_D'
+    p[0] = ("EQUIPOS", p[4])
+    
+def p_lista_equipos(p):
+    '''lista_equipos : equipo
+                     | equipo COMA lista_equipos'''
+    if len(p) == 2:
+        p[0] = [p[1]]
+    else:
+        p[0] = [p[1]] + p[3]
+
+def p_equipo(p):
+    'equipo : LLAVE_I atributos_equipo LLAVE_D'
+    p[0] = ("EQUIPO", p[2])
+
+def p_atributos_equipo(p):
+    '''atributos_equipo : NOMBRE_EQ DOSPUNTOS STRING COMA ASIGNATURA DOSPUNTOS STRING'''
+    p[0] = {"nombre_equipo": p[3], "asignatura": p[7]}
+
+# -----------------
+# Errores
+# -----------------
+
+def p_error(p):
+    if p:
+        print(f"Error de sintaxis en '{p.value}'")
+    else:
+        print("Error de sintaxis: final inesperado")
+
+# -----------------
+# Crear el parser
+# -----------------
+
+parser = yacc.yacc()
+    
 
