@@ -16,8 +16,8 @@ tokens = (
         
         "NOMBRE", "EDAD", "CARGO", "FOTO", "EMAIL", "HABILIDADES", "SALARIO", "ACTIVO",
         
-        "PROYECTOS", "NOMBRE_PROY", "ESTADO_PROY", "RESUMEN_PROY", "TAREAS_PROY", "FECHA_INICIO",
-        "FECHA_FIN", "VIDEO_PROY", "CONCLUSION_PROY"
+        "PROYECTOS", "NOMBRE_PROY", "ESTADO_PROY", "RESUMEN_PROY", "TAREAS_PROY", "FECHA_INICIO", "FECHA_FIN", "FECHA_VALOR",
+        "VIDEO_PROY", "CONCLUSION_PROY",
         
         "FECHA", "NULL", "INTEGER", "FLOAT", "BOOLEAN", "URL", "STRING"
          )
@@ -30,6 +30,14 @@ t_COMA = r','
 t_DOSPUNTOS = r':'
 
 t_ignore =  ' \t\n'
+
+def t_FECHA_VALOR(t):
+    r'"(19|20)\d{2}-\d{2}-\d{2}"'
+    return t
+
+def t_URL(t):
+   r'"https?://[^\s"]+"'
+   return t 
 
 def t_STRING(t):
     r'"[^"]*"'
@@ -57,7 +65,7 @@ def t_STRING(t):
         '"estado"': "ESTADO_PROY",
         '"resumen"': "RESUMEN_PROY",
         '"tareas"': "TAREAS_PROY",
-        '"fecha_inicio"': "FECHA_INICIO",
+        '"fecha_creacion"': "FECHA_INICIO",
         '"fecha_fin"': "FECHA_FIN",
         '"video"': "VIDEO_PROY",
         '"conclusion"': "CONCLUSION_PROY"
@@ -86,19 +94,31 @@ def t_NULL(t):
     r'null'
     return t 
 
-def t_FECHA(t):
-    r'"(19|20)\d{2}-\d{2}-\d{2}"'
-    return t
-
-def t_URL(t):
-   r'"https?://[^\s"]+"'
-   return t 
-
 def t_error(t):
    print(f"Caracter ilegal '{t.value[0]}'")
    t.lexer.skip(1) 
 
 lexer = lex.lex()
 
+# PRUEBA
+if __name__ == "__main__":
+    data = '''
+        {
+        "nombre_equipo": "Los Pibes",
+        "identidad_equipo": "https://pagina.com",
+        "asignatura": "Sintaxis",
+        "carrera": "Sistemas",
+        "universidad_regional": "UTN FRRe",
+        "direccion": null,
+        "alianza equipo": "Unidos",
+        "integrantes": [],
+        "proyectos": [],
+        "fecha_creacion": "2025-04-15"
+        }
+        '''
+
+    lexer.input(data)
+    for tok in lexer:
+        print(tok)
   
 
