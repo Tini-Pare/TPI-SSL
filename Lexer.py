@@ -128,10 +128,7 @@ if __name__ == "__main__":
 parser = yacc.yacc()
 
 def p_jason(p):
-    '''json: LLAVE_I estructura_equipo LLAVE_D
-            | LLAVE_I estructura_equipo COMA otros LLAVE_D
-            |LLAVE_I firma COMA otros2 LLAVE_D
-            |LLAVE_I version COMA otros3 LLAVE_D'''
+    'json: LLAVE_I estructura_equipo LLAVE_D'
     p[0] = ("EQUIPOS", p[2])
     
 def p_estructura_equipo(p):
