@@ -30,7 +30,7 @@
           "cargo": "Developer",
           "foto": " falta  ",
           "email": "agustina.pare.collante@gmail.com ",
-          "habilidades": "Programación, testing, inglés, planificación, liderazgo",
+          "habilidades": "Programación, testing, inglés, planificación, liderazgo, redaccion de documentos",
           "salario": 50000.0,
           "activo": true
         },
@@ -56,7 +56,7 @@
         },
         {
           "nombre": "Ocampo, Santiago Mariano",
-          "edad": falta,
+          "edad": "",
           "cargo": "falta ",
           "foto": "falta",
           "email": "falta ",
