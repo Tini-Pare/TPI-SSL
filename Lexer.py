@@ -101,40 +101,42 @@ def t_error(t):
 
 lexer = lex.lex()
 
-# PRUEBA
-if __name__ == "__main__":
-    data = '''
-        {
-        "nombre_equipo": "Los Pibes",
-        "identidad_equipo": "https://pagina.com",
-        "asignatura": "Sintaxis",
-        "carrera": "Sistemas",
-        "universidad_regional": "UTN FRRe",
-        "direccion": null,
-        "alianza equipo": "Unidos",
-        "integrantes": [],
-        "proyectos": [],
-        "fecha_creacion": "2025-04-15"
-        }
-        '''
+import os
 
+if __name__ == "__main__":
+    # Conseguimos la ruta del archivo .py
+    ruta_base = os.path.dirname(os.path.abspath(__file__))
+    
+    # Construimos la ruta al JSON
+    ruta_json = os.path.join(ruta_base, 'turing_version_base.json')
+    
+    # Abrimos el archivo
+    with open(ruta_json, 'r', encoding='utf-8') as f:
+        data = f.read()
+    
+    # Le damos el contenido al lexer
     lexer.input(data)
+
     for tok in lexer:
         print(tok)
   
 
 # ---- parser ------
 
-parser = yacc.yacc()
+import ply.yacc as yacc
 
-def p_jason(p):
-    'json: LLAVE_I estructura_equipo LLAVE_D'
-    p[0] = ("EQUIPOS", p[2])
-    
+# -----------------
+# Reglas del parser
+# -----------------
+
+def p_json(p):
+    'json : LLAVE_I estructura_equipo LLAVE_D'
+    p[0] = ("JSON", p[2])
+
 def p_estructura_equipo(p):
-    'esturctura_equipo: EQUIPOS DOSPUNTOS CORCHETE_I lista_equipos CORCHETE_D'
+    'estructura_equipo : EQUIPOS DOSPUNTOS CORCHETE_I lista_equipos CORCHETE_D'
     p[0] = ("EQUIPOS", p[4])
-    
+
 def p_lista_equipos(p):
     '''lista_equipos : equipo
                      | equipo COMA lista_equipos'''
@@ -152,7 +154,7 @@ def p_atributos_equipo(p):
     p[0] = {"nombre_equipo": p[3], "asignatura": p[7]}
 
 # -----------------
-# Errores
+# Manejo de errores
 # -----------------
 
 def p_error(p):
@@ -166,5 +168,3 @@ def p_error(p):
 # -----------------
 
 parser = yacc.yacc()
-    
-
