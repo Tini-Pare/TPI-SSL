@@ -1,7 +1,5 @@
 import re
 import ply.lex as lex
-from tkinter import filedialog
-import tkinter as tk
 import time
 import ply.yacc as yacc
 
@@ -87,7 +85,7 @@ def t_FLOAT(t):
     return t 
 
 def t_BOOLEAN(t):
-    r'(true|flase)'
+    r'(true|false)'
     t.value = True if t.value == 'true' else False
     return t 
 
@@ -125,9 +123,8 @@ if __name__ == "__main__":
 
 import ply.yacc as yacc
 
-# -----------------
 # Reglas del parser
-# -----------------
+
 
 def p_json(p):
     'json : LLAVE_I estructura_equipo LLAVE_D'
@@ -153,9 +150,7 @@ def p_atributos_equipo(p):
     '''atributos_equipo : NOMBRE_EQ DOSPUNTOS STRING COMA ASIGNATURA DOSPUNTOS STRING'''
     p[0] = {"nombre_equipo": p[3], "asignatura": p[7]}
 
-# -----------------
 # Manejo de errores
-# -----------------
 
 def p_error(p):
     if p:
