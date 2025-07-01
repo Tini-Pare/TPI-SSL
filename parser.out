@@ -1,0 +1,283 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    ACTIVO
+    ALIANZA_EQ
+    BOOLEAN
+    CARGO
+    CARRERA
+    COMILLA
+    CONCLUSION_PROY
+    DIRECCION
+    EDAD
+    EMAIL
+    ESTADO_PROY
+    FECHA
+    FECHA_FIN
+    FECHA_INICIO
+    FECHA_VALOR
+    FIRMA_DIGITAL
+    FLOAT
+    FOTO
+    HABILIDADES
+    IDENTIDAD_EQ
+    INTEGER
+    LINK
+    NOMBRE
+    NOMBRE_PROY
+    NULL
+    PROYECTOS
+    RESUMEN_PROY
+    SALARIO
+    TAREAS_PROY
+    UNIVERSIDAD_REG
+    URL
+    VERSION
+    VIDEO_PROY
+
+Grammar
+
+Rule 0     S' -> json
+Rule 1     json -> LLAVE_I estructura_equipo LLAVE_D
+Rule 2     estructura_equipo -> EQUIPOS DOSPUNTOS CORCHETE_I lista_equipos CORCHETE_D
+Rule 3     lista_equipos -> equipo
+Rule 4     lista_equipos -> equipo COMA lista_equipos
+Rule 5     equipo -> LLAVE_I atributos_equipo LLAVE_D
+Rule 6     atributos_equipo -> NOMBRE_EQ DOSPUNTOS STRING COMA ASIGNATURA DOSPUNTOS STRING
+
+Terminals, with rules where they appear
+
+ACTIVO               : 
+ALIANZA_EQ           : 
+ASIGNATURA           : 6
+BOOLEAN              : 
+CARGO                : 
+CARRERA              : 
+COMA                 : 4 6
+COMILLA              : 
+CONCLUSION_PROY      : 
+CORCHETE_D           : 2
+CORCHETE_I           : 2
+DIRECCION            : 
+DOSPUNTOS            : 2 6 6
+EDAD                 : 
+EMAIL                : 
+EQUIPOS              : 2
+ESTADO_PROY          : 
+FECHA                : 
+FECHA_FIN            : 
+FECHA_INICIO         : 
+FECHA_VALOR          : 
+FIRMA_DIGITAL        : 
+FLOAT                : 
+FOTO                 : 
+HABILIDADES          : 
+IDENTIDAD_EQ         : 
+INTEGER              : 
+LINK                 : 
+LLAVE_D              : 1 5
+LLAVE_I              : 1 5
+NOMBRE               : 
+NOMBRE_EQ            : 6
+NOMBRE_PROY          : 
+NULL                 : 
+PROYECTOS            : 
+RESUMEN_PROY         : 
+SALARIO              : 
+STRING               : 6 6
+TAREAS_PROY          : 
+UNIVERSIDAD_REG      : 
+URL                  : 
+VERSION              : 
+VIDEO_PROY           : 
+error                : 
+
+Nonterminals, with rules where they appear
+
+atributos_equipo     : 5
+equipo               : 3 4
+estructura_equipo    : 1
+json                 : 0
+lista_equipos        : 2 4
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . json
+    (1) json -> . LLAVE_I estructura_equipo LLAVE_D
+
+    LLAVE_I         shift and go to state 2
+
+    json                           shift and go to state 1
+
+state 1
+
+    (0) S' -> json .
+
+
+
+state 2
+
+    (1) json -> LLAVE_I . estructura_equipo LLAVE_D
+    (2) estructura_equipo -> . EQUIPOS DOSPUNTOS CORCHETE_I lista_equipos CORCHETE_D
+
+    EQUIPOS         shift and go to state 4
+
+    estructura_equipo              shift and go to state 3
+
+state 3
+
+    (1) json -> LLAVE_I estructura_equipo . LLAVE_D
+
+    LLAVE_D         shift and go to state 5
+
+
+state 4
+
+    (2) estructura_equipo -> EQUIPOS . DOSPUNTOS CORCHETE_I lista_equipos CORCHETE_D
+
+    DOSPUNTOS       shift and go to state 6
+
+
+state 5
+
+    (1) json -> LLAVE_I estructura_equipo LLAVE_D .
+
+    $end            reduce using rule 1 (json -> LLAVE_I estructura_equipo LLAVE_D .)
+
+
+state 6
+
+    (2) estructura_equipo -> EQUIPOS DOSPUNTOS . CORCHETE_I lista_equipos CORCHETE_D
+
+    CORCHETE_I      shift and go to state 7
+
+
+state 7
+
+    (2) estructura_equipo -> EQUIPOS DOSPUNTOS CORCHETE_I . lista_equipos CORCHETE_D
+    (3) lista_equipos -> . equipo
+    (4) lista_equipos -> . equipo COMA lista_equipos
+    (5) equipo -> . LLAVE_I atributos_equipo LLAVE_D
+
+    LLAVE_I         shift and go to state 10
+
+    lista_equipos                  shift and go to state 8
+    equipo                         shift and go to state 9
+
+state 8
+
+    (2) estructura_equipo -> EQUIPOS DOSPUNTOS CORCHETE_I lista_equipos . CORCHETE_D
+
+    CORCHETE_D      shift and go to state 11
+
+
+state 9
+
+    (3) lista_equipos -> equipo .
+    (4) lista_equipos -> equipo . COMA lista_equipos
+
+    CORCHETE_D      reduce using rule 3 (lista_equipos -> equipo .)
+    COMA            shift and go to state 12
+
+
+state 10
+
+    (5) equipo -> LLAVE_I . atributos_equipo LLAVE_D
+    (6) atributos_equipo -> . NOMBRE_EQ DOSPUNTOS STRING COMA ASIGNATURA DOSPUNTOS STRING
+
+    NOMBRE_EQ       shift and go to state 14
+
+    atributos_equipo               shift and go to state 13
+
+state 11
+
+    (2) estructura_equipo -> EQUIPOS DOSPUNTOS CORCHETE_I lista_equipos CORCHETE_D .
+
+    LLAVE_D         reduce using rule 2 (estructura_equipo -> EQUIPOS DOSPUNTOS CORCHETE_I lista_equipos CORCHETE_D .)
+
+
+state 12
+
+    (4) lista_equipos -> equipo COMA . lista_equipos
+    (3) lista_equipos -> . equipo
+    (4) lista_equipos -> . equipo COMA lista_equipos
+    (5) equipo -> . LLAVE_I atributos_equipo LLAVE_D
+
+    LLAVE_I         shift and go to state 10
+
+    equipo                         shift and go to state 9
+    lista_equipos                  shift and go to state 15
+
+state 13
+
+    (5) equipo -> LLAVE_I atributos_equipo . LLAVE_D
+
+    LLAVE_D         shift and go to state 16
+
+
+state 14
+
+    (6) atributos_equipo -> NOMBRE_EQ . DOSPUNTOS STRING COMA ASIGNATURA DOSPUNTOS STRING
+
+    DOSPUNTOS       shift and go to state 17
+
+
+state 15
+
+    (4) lista_equipos -> equipo COMA lista_equipos .
+
+    CORCHETE_D      reduce using rule 4 (lista_equipos -> equipo COMA lista_equipos .)
+
+
+state 16
+
+    (5) equipo -> LLAVE_I atributos_equipo LLAVE_D .
+
+    COMA            reduce using rule 5 (equipo -> LLAVE_I atributos_equipo LLAVE_D .)
+    CORCHETE_D      reduce using rule 5 (equipo -> LLAVE_I atributos_equipo LLAVE_D .)
+
+
+state 17
+
+    (6) atributos_equipo -> NOMBRE_EQ DOSPUNTOS . STRING COMA ASIGNATURA DOSPUNTOS STRING
+
+    STRING          shift and go to state 18
+
+
+state 18
+
+    (6) atributos_equipo -> NOMBRE_EQ DOSPUNTOS STRING . COMA ASIGNATURA DOSPUNTOS STRING
+
+    COMA            shift and go to state 19
+
+
+state 19
+
+    (6) atributos_equipo -> NOMBRE_EQ DOSPUNTOS STRING COMA . ASIGNATURA DOSPUNTOS STRING
+
+    ASIGNATURA      shift and go to state 20
+
+
+state 20
+
+    (6) atributos_equipo -> NOMBRE_EQ DOSPUNTOS STRING COMA ASIGNATURA . DOSPUNTOS STRING
+
+    DOSPUNTOS       shift and go to state 21
+
+
+state 21
+
+    (6) atributos_equipo -> NOMBRE_EQ DOSPUNTOS STRING COMA ASIGNATURA DOSPUNTOS . STRING
+
+    STRING          shift and go to state 22
+
+
+state 22
+
+    (6) atributos_equipo -> NOMBRE_EQ DOSPUNTOS STRING COMA ASIGNATURA DOSPUNTOS STRING .
+
+    LLAVE_D         reduce using rule 6 (atributos_equipo -> NOMBRE_EQ DOSPUNTOS STRING COMA ASIGNATURA DOSPUNTOS STRING .)
+
