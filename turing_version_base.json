@@ -4,7 +4,7 @@
       "nombre_equipo": "Turing's Version",
       "identidad_equipo": "https://i.imgur.com/SXs1DOF.jpeg",
       "link": "https://campusvirtual.utn.edu.ar/materia/sintaxis",
-      "asignatura": "Sintaxis y Semántica de Lenguajes",
+      "asignatura": "Sintaxis y Semantica de Lenguajes",
       "carrera": "Ingeniería en Sistemas de Información",
       "universidad_regional": "UTN Facultad Regional Resistencia",
       "dirección": {
@@ -28,7 +28,7 @@
           "nombre": "Pare Collante, Agustina",
           "edad": 20,
           "cargo": "Developer",
-          "foto": " https://imgur.com/a/lOSny3P  ",
+          "foto": "https://i.imgur.com/M29IdmO.jpeg",
           "email": "agustina.pare.collante@gmail.com ",
           "habilidades": "Programación, testing, inglés, planificación, liderazgo, redaccion de documentos",
           "salario": 50000.0,
@@ -38,7 +38,7 @@
           "nombre": "Sarachaga, Lautaro Leonel",
           "edad": 22,
           "cargo": "Developer",
-          "foto": "https://imgur.com/a/EmZKcuC",
+          "foto": "https://i.imgur.com/VeAHWXH.jpeg",
           "email": "lautarosarachaga@hotmail.com",
           "habilidades": "Programación, planteo de soluciones",
           "salario": 50000.0,
@@ -48,7 +48,7 @@
           "nombre": "Martínez, Carlos Exequiel",
           "edad": 22,
           "cargo": "Project Manager",
-          "foto": "https://imgur.com/a/uoKyUrf",
+          "foto": "https://i.imgur.com/Q7xd6lT.jpeg",
           "email": "exemartinez1922@gmail.com",
           "habilidades": "Manejo de Inglés, Redacción de documentos, Producción de videos",
           "salario": 50000.0,
@@ -67,7 +67,7 @@
       ],
       "proyectos": [
         {
-          "nombre": "Intérprete JSON y traductor HTML",
+          "nombre_proy": "Intérprete JSON y traductor HTML",
           "estado": "In progress",
           "resumen": "Construcción de un intérprete que valide y traduzca archivos JSON a HTML.",
           "tareas": [
