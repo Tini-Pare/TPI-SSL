@@ -1,0 +1,112 @@
+{
+  "equipos": [
+    {
+      "nombre_equipo": "El equipo de la torguga",
+      "identidad_equipo": "https://imgur.com/gallery/real-madrid-0JjBW",
+      "asignatura": "Sintaxis y Semántica de Lenguajes",
+      "carrera": "Ingeniería en Sistemas de Información",
+      "universidad_regional": "UTN Facultad Regional Resistencia",
+      "alianza_equipo": "Como equipo asumimos presentar el mejor TPI y ganar muchas champions",
+      "integrantes": [
+        {
+          "Nombre": "Kylian Mbappe",
+          "edad": 29,
+          "cargo": "DB admin",
+          "foto": "https://imgur.com/gallery/mbappe-png-dkToalF#/t/mbappe",
+          "email": "km_1999@hotmail.com",
+          "habilidades": "Planificacion, liderazgo, redaccion de documentos, planteo de soluciones, trabajo en equipo ",
+          "salario": 30000000.0,
+          "activo": true
+        },
+        {
+          "Nombre": "Jude Bellingham",
+          "edad": 22,
+          "cargo": "Developer",
+          "foto": "https://imgur.com/gallery/bellingham-y4AkuBQ",
+          "email": "belingol2003@outlook.com",
+          "habilidades": "Programación, testing, inglés, planificación, liderazgo, redaccion de documentos",
+          "salario": 25000000.0,
+          "activo": true
+        },
+        {
+          "Nombre": "Dean Huijsen",
+          "edad": 20,
+          "cargo": "Developer",
+          "foto": "https://imgur.com/gallery/huijsen-zCeRKOD",
+          "email": "dani_er2@yahoo.com",
+          "habilidades": "planteo de soluciones",
+          "salario": 20000000.0,
+          "activo": true
+        },
+        {
+          "nombre": "Xabi Alonso",
+          "edad": 43,
+          "cargo": "Project Manager",
+          "foto": "https://imgur.com/gallery/xabi-alonso-kEPzb",
+          "email": "xabi_elmejor5@hotmail.com",
+          "habilidades": "Manejo de Inglés, Redacción de documentos, Producción de videos",
+          "salario": 50000.0,
+          "activo": true
+        },
+        {
+          "nombre": "Vinicius Junior",
+          "edad": "24",
+          "cargo": "Product Analyst, Marketing",
+          "foto": "https://imgur.com/gallery/vini-xsb9HDB",
+          "email": "vinics@hotmail.com",
+          "habilidades": "Programación",
+          "salario": 50000.0,
+          "activo": true
+        }
+      ],
+      "proyectos": [
+        {
+          "nombre": "Intérprete JSON y traductor HTML",
+          "estado": "In progress",
+          "resumen": "Construcción de un intérprete que valide y traduzca archivos JSON a HTML.",
+          "tareas": [
+            {
+              "nombre": "Conformacion de Equipo(matriz,identidad,alianza).",
+              "estado": "Done",
+              "resumen": "Se conformó el equipo de trabajo, se armó la matriz de habilidades, se definió el nombre y logo del grupo, y se acordó una alianza con reuniones, comunicación y herramientas colaborativas.",
+              "fecha_inicio": "2025-04-11",
+              "fecha_fin": "2025-05-04"
+            },
+            {
+              "nombre": "Diseño de gramática",
+              "estado": "Done",
+              "resumen": "Definición de símbolos y reglas de producción.",
+              "fecha_inicio": "2025-04-11",
+              "fecha_fin": "2025-05-04"
+            },
+            {
+              "nombre": "Implementación del lexer",
+              "estado": "In progress",
+              "resumen": "Desarrollo del módulo de análisis léxico.",
+              "fecha_inicio": "2025-04-18",
+              "fecha_fin": "2025-06-08"
+            },
+            {
+              "nombre": "Parser y validación",
+              "estado": "To do",
+              "resumen": "Implementación del parser sintáctico y validación de estructuras.",
+              "fecha_inicio": "2025-06-11",
+              "fecha_fin": "2025-07-06"
+            },
+            {
+              "nombre": "Ganar La champions",
+              "estado": "To do",
+              "resumen": "Avanzar fase de grupos e instancias eliminatorias",
+              "fecha_inicio": "2025-07-06",
+              "fecha_fin": "2026-05-30"
+            }
+          ],
+          "fecha_inicio": "2025-04-06",
+          "fecha_fin": "2025-07-06",
+          "video": "link de video ",
+          "conclusion": "Por completar."
+        }
+      ]
+    }
+  ]
+}

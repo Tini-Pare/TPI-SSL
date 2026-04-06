@@ -1,0 +1,113 @@
+{
+  "equipos": [
+    {
+      "nombre_equipo": "Turing's Version",
+      "identidad_equipo": "https://i.imgur.com/SXs1DOF.jpeg",
+      "link": "https://frre.cvg.utn.edu.ar/course/view.php?id=399",
+      "asignatura": "Sintaxis y Semantica de Lenguajes",
+      "carrera": "Ingeniería en Sistemas de Información",
+      "universidad_regional": "UTN Facultad Regional Resistencia",
+      "dirección": {
+        "calle": "C.French 414",
+        "ciudad": "Resistencia",
+        "país": "Argentina"
+      },
+      "alianza_equipo": "Como equipo, asumimos el compromiso de trabajar de manera colaborativa, con responsabilidad y una comunicación constante que nos permita avanzar de forma sostenida en el desarrollo del proyecto. Nuestros valores fundamentales serán la responsabilidad técnica y académica, el respeto por las ideas y aportes de cada integrante, el compromiso con el aprendizaje colectivo, la claridad y constancia en la comunicación, y la búsqueda de calidad tanto en el código como en la documentación. En cuanto a la organización del trabajo, acordamos reunirnos tres veces por semana para coordinar avances, revisar el código y distribuir tareas de forma eficiente. Las reuniones se llevarán a cabo los lunes, miércoles y viernes a las 10: 00 horas, de manera virtual a través de Discord. Para la comunicación diaria y ágil utilizaremos WhatsApp como canal principal. Asimismo, trabajaremos de forma colaborativa mediante GitHub para el control de versiones y el desarrollo del código, y emplearemos Google Drive para compartir y mantener actualizada la documentación del proyecto.",
+      "integrantes": [
+        {
+          "nombre": "Godoy, Marianela Yasmín",
+          "edad": 22,
+          "cargo": "DB admin",
+          "foto": "https://i.imgur.com/64np2nL.jpeg",
+          "email": "marianelagodoyy21@gmail.com",
+          "habilidades": "Planificacion, liderazgo, redaccion de documentos, planteo de soluciones, trabajo en equipo ",
+          "salario": 30000.0,
+          "activo": true
+        },
+        {
+          "nombre": "Pare Collante, Agustina",
+          "edad": 20,
+          "cargo": "Developer",
+          "foto": "https://i.imgur.com/M29IdmO.jpeg",
+          "email": "agustina.pare.collante@gmail.com",
+          "habilidades": "Programación, testing, inglés, planificación, liderazgo, redaccion de documentos",
+          "salario": 50000.0,
+          "activo": true
+        },
+        {
+          "nombre": "Sarachaga, Lautaro Leonel",
+          "edad": 22,
+          "cargo": "Developer",
+          "foto": "https://i.imgur.com/VeAHWXH.jpeg",
+          "email": "lautarosarachaga@hotmail.com",
+          "habilidades": "Programación, planteo de soluciones",
+          "salario": 50000.0,
+          "activo": true
+        },
+        {
+          "nombre": "Martínez, Carlos Exequiel",
+          "edad": 22,
+          "cargo": "Project Manager",
+          "foto": "https://i.imgur.com/Q7xd6lT.jpeg",
+          "email": "exemartinez1922@gmail.com",
+          "habilidades": "Manejo de Inglés, Redacción de documentos, Producción de videos",
+          "salario": 50000.0,
+          "activo": true
+        },
+        {
+          "nombre": "Ocampo, Santiago Mariano",
+          "edad": "21",
+          "cargo": "Product Analyst, Marketing",
+          "foto": "https://i.imgur.com/3kLwQrE.jpeg",
+          "email": "ocamposantiago.smo@gmail.com",
+          "habilidades": "Planificación, Liderazgo , Trabajo en equipo, Manejo de Inglés, Programación",
+          "salario": 50000.0,
+          "activo": true
+        }
+      ],
+      "proyectos": [
+        {
+          "nombre_proy": "Intérprete JSON y traductor HTML",
+          "estado_proy": "In progress",
+          "resumen": "Construcción de un intérprete que valide y traduzca archivos JSON a HTML.",
+          "tareas": [
+            {
+              "nombre": "Conformacion de Equipo(matriz,identidad,alianza).",
+              "estado_proy": "Done",
+              "resumen": "Se conformó el equipo de trabajo, se armó la matriz de habilidades, se definió el nombre y logo del grupo, y se acordó una alianza con reuniones, comunicación y herramientas colaborativas.",
+              "fecha_inicio": "2025-04-11",
+              "fecha_fin": "2025-05-04"
+            },
+            {
+              "nombre": "Diseño de gramática",
+              "estado_proy": "Done",
+              "resumen": "Definición de símbolos y reglas de producción.",
+              "fecha_inicio": "2025-04-11",
+              "fecha_fin": "2025-05-04"
+            },
+            {
+              "nombre": "Implementación del lexer",
+              "estado_proy": "Done",
+              "resumen": "Desarrollo del módulo de análisis léxico.",
+              "fecha_inicio": "2025-04-18",
+              "fecha_fin": "2025-06-08"
+            },
+            {
+              "nombre": "Parser y validación",
+              "estado_proy": "Done",
+              "resumen": "Implementación del parser sintáctico y validación de estructuras.",
+              "fecha_inicio": "2025-06-11",
+              "fecha_fin": "2025-07-06"
+            }
+          ],
+          "fecha_inicio": "2025-04-06",
+          "fecha_fin": "2025-07-06",
+          "video": "https://www.youtube.com/watch?v=JCs2QG_pgxY",
+          "conclusion": "El trabajo realizado constituyó una base sólida para construir exitosamente el parser y el traductor de un intérprete JSON. Se logró formalizar de forma rigurosa la estructura del archivo, contemplando todos los elementos clave como equipos, integrantes, proyectos y tareas, así como listas, estructuras anidadas y campos opcionales. La gramática diseñada fue robusta y permitió validar correctamente la sintaxis del archivo, mientras que el análisis léxico identificó eficientemente los distintos tipos de datos.Entre los principales logros se destacan la correcta transformación del JSON a un HTML ordenado y semántico, y la implementación de reglas claras y flexibles en la gramática. Sin embargo, también se presentaron dificultades, especialmente en el manejo preciso de comas, la tokenización de ciertos valores, y la gestión de errores diferenciada según el modo de uso (interactivo o por archivo). Estos desafíos exigieron numerosas pruebas y ajustes.En resumen, este proyecto permitió afianzar tanto los aspectos técnicos del análisis léxico y sintáctico como habilidades fundamentales como la organización, la depuración y el trabajo colaborativo, aportando además un resultado visual concreto que refuerza la utilidad del desarrollo realizado."
+        }
+      ]
+    }
+  ],
+  "version": "Release 1.0",
+  "firma_digital": "Turing's Version"
+}
